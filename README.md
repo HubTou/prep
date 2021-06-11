@@ -50,7 +50,7 @@ Options | Use
 ## FILES
 Ignore and only files contain words, one per line.
 
-The file **/usr/local/etc/eign** was originally provided in **/usr/lib** as a example or default ignore file.
+The file **/usr/local/etc/eign** was originally provided in **/usr/lib** as an example or default ignore file.
 
 ## EXIT STATUS
 The **prep** utility exits 0 on success, and >0 if an error occurs.
