@@ -46,7 +46,10 @@ love:
 man/${NAME}.1.gz: man/${NAME}.1
 	@gzip -k9c man/${NAME}.1 > man/${NAME}.1.gz
 
-package: man/${NAME}.1.gz
+etc/eign:
+	@fetch -q "https://minnie.tuhs.org/cgi-bin/utree.pl?file=V7/usr/lib/eign" -o - | html2text | tail +2 > etc/eign
+
+package: man/${NAME}.1.gz etc/eign
 	python -m build
 
 upload-test:
