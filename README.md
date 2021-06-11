@@ -63,6 +63,9 @@ The **prep** utility is a deprecated [UNIX 7th edition](https://minnie.tuhs.org/
 
 Our implementation tries to follow the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for [Python](https://www.python.org/) code.
 
+## PORTABILITY
+Tested OK under Windows.
+
 ## HISTORY
 This utility was made for [The PNU project / PyNIX](https://github.com/HubTou/PNU), out of historical curiosity and for fun, though it doesn't seem very useful...
 
