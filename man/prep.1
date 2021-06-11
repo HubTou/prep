@@ -1,0 +1,142 @@
+.Dd June 11, 2021
+.Dt PREP 1
+.Os
+.Sh NAME
+.Nm prep
+.Nd prepare text for statistical processing
+.Sh SYNOPSIS
+.Nm
+.Op Fl a|--ascii
+.Op Fl d|--number
+.Op Fl h|--hyphen
+.Op Fl i|--ignore
+.Op Fl o|--only
+.Op Fl p|--ponctuate
+.Op Fl -debug
+.Op Fl -help|-?
+.Op Fl -version
+.Op Fl -
+.Op Ar file
+.Op Ar ...
+.Sh DESCRIPTION
+.Nm
+reads each
+.Ar file
+in sequence
+and writes it on the standard output, one lowercase `word' per line.
+A word is a string of alphabetic characters and embedded apostrophes, delimited by space or punctuation.
+Hyphenated words are broken apart;
+hyphens at the end of lines are removed and the hyphenated parts are joined.
+Strings of digits are discarded.
+.Pp
+When no files are given as arguments, standard input is used instead.
+.Pp
+The following option letters may appear in any order:
+.Ss OPTIONS
+.Op Fl a|--ascii
+Try to convert Unicode letters to ASCII.
+.Pp
+.Op Fl d|--number
+Print the word number (in the input stream) with each word.
+.Pp
+.Op Fl h|--hyphen
+Don't break words on hyphens.
+.Pp
+.Op Fl i|--ignore
+Take the next
+.Ar file
+as an `ignore' file.
+These words will not appear in the output.
+(They will be counted, for purposes of the
+.Fl d
+numbering.)
+.Pp
+.Op Fl o|--only
+Take the next
+.Ar file
+as an `only' file.
+Only these words will appear in the output.
+(All other words will also be counted for the
+.Fl d
+numbering.)
+.Pp
+.Op Fl p|--ponctuate
+Include punctuation marks (single nonalphanumeric characters from the "!(),.:;?" set) as separate output lines.
+The punctuation marks are not counted for the
+.Fl d
+numbering.
+.Pp
+.Op Fl -debug
+Enable debug mode
+.Pp
+.Op Fl -help|-?
+Print usage and this help message and exit
+.Pp
+.Op Fl -version
+Print version and exit
+.Pp
+.Op Fl -
+Options processing terminator
+.Sh FILES
+Ignore and only files contain words, one per line.
+.Pp
+The file
+.Pa /usr/local/etc/eign
+was originally provided in
+.Pa /usr/lib
+as a example or default ignore file.
+.Sh EXIT STATUS
+.Ex -std prep
+.Sh SEE ALSO
+.Xr deroff 1
+.Sh STANDARDS
+The
+.Nm
+utility is a deprecated UNIX 7th edition command
+(it also appeared in Unix V7M, Ultrix 3.1, 2.9BSD and 2.11BSD).
+.Pp
+Our implementation tries to follow the PEP 8 style guide for Python code.
+.Sh HISTORY
+This utility was made for
+.Lk https://github.com/HubTou/PNU [The PNU project / PyNIX]
+out of historical curiosity and for fun, though it doesn't seem very useful...
+.Pp
+Some features were added compared to the original command:
+.Bl -bullet
+.It
+Unicode letters are now supported by default (the original command predated Unicode by 12 years).
+.It
+It is now possible to use the
+.Fl i
+and
+.Fl o
+options at the same time.
+.It
+The
+.Fl h
+option was added to avoid breaking word on hyphens, which makes sense in French.
+.It
+The
+.Fl a
+option was added to try to convert Unicode accented letters to their ASCII equivalent.
+.El
+.Pp
+Several bugs from the original
+.Nm
+command were corrected:
+.Bl -bullet
+.It
+A display bug on hyphenated words inside a line when used with the combined
+.Fl d
+and
+.Fl p
+options.
+.It
+A bug with lines starting by an apostrophe.
+.It
+A bug with the character following an apostrophe.
+.El
+.Sh LICENSE
+This utility is available under the 3-clause BSD license.
+.Sh AUTHORS
+.An Hubert Tournier
