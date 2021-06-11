@@ -50,13 +50,13 @@ Options | Use
 ## FILES
 Ignore and only files contain words, one per line.
 
-The file **/usr/local/etc/eign** was originally provided in **/usr/lib** as an example or default ignore file.
+The file [/usr/local/etc/eign](https://minnie.tuhs.org/cgi-bin/utree.pl?file=V7/usr/lib/eign) was originally provided in **/usr/lib** as an example or default ignore file.
 
 ## EXIT STATUS
 The **prep** utility exits 0 on success, and >0 if an error occurs.
 
 ## SEE ALSO
-deroff(1)
+[deroff(1)](http://man.cat-v.org/unix_7th/1/deroff)
 
 ## STANDARDS
 The **prep** utility is a deprecated [UNIX 7th edition](https://minnie.tuhs.org/cgi-bin/utree.pl?file=V7) command (it also appeared in Unix V7M, Ultrix 3.1, 2.9BSD and 2.11BSD).
