@@ -59,7 +59,7 @@ The **prep** utility exits 0 on success, and >0 if an error occurs.
 deroff(1)
 
 ## STANDARDS
-The **prep** utility is a deprecated UNIX 7th edition command (it also appeared in Unix V7M, Ultrix 3.1, 2.9BSD and 2.11BSD).
+The **prep** utility is a deprecated [UNIX 7th edition](https://minnie.tuhs.org/cgi-bin/utree.pl?file=V7) command (it also appeared in Unix V7M, Ultrix 3.1, 2.9BSD and 2.11BSD).
 
 Our implementation tries to follow the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for [Python](https://www.python.org/) code.
 
@@ -67,7 +67,7 @@ Our implementation tries to follow the [PEP 8](https://www.python.org/dev/peps/p
 This utility was made for [The PNU project / PyNIX](https://github.com/HubTou/PNU), out of historical curiosity and for fun, though it doesn't seem very useful...
 
 Some features were added compared to the original command:
-* Unicode letters are now supported by default (the original command predated Unicode by 12 years).
+* [Unicode](https://en.wikipedia.org/wiki/Unicode) letters are now supported by default (the original command predated Unicode by 12 years).
 * It is now possible to use the **-i** and **-o** options at the same time.
 * The **-h** option was added to avoid breaking word on hyphens, which makes sense in French.
 * The **-a** option was added to try to convert Unicode accented letters to their ASCII equivalent.
