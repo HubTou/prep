@@ -55,8 +55,6 @@ The file **/usr/local/etc/eign** was originally provided in **/usr/lib** as an e
 ## EXIT STATUS
 The **prep** utility exits 0 on success, and >0 if an error occurs.
 
-## EXAMPLES
-
 ## SEE ALSO
 deroff(1)
 
