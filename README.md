@@ -59,7 +59,7 @@ The **prep** utility exits 0 on success, and >0 if an error occurs.
 deroff(1)
 
 ## STANDARDS
-The **prep* utility is a deprecated UNIX 7th edition command (it also appeared in Unix V7M, Ultrix 3.1, 2.9BSD and 2.11BSD).
+The **prep** utility is a deprecated UNIX 7th edition command (it also appeared in Unix V7M, Ultrix 3.1, 2.9BSD and 2.11BSD).
 
 Our implementation tries to follow the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for [Python](https://www.python.org/) code.
 
