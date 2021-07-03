@@ -12,7 +12,7 @@ import sys
 import unicodedata
 
 # Version string used by the what(1) and ident(1) commands:
-ID = "@(#) $Id: prep - prepare text for statistical processing v1.0.1 (June 13, 2021) by Hubert Tournier $"
+ID = "@(#) $Id: prep - prepare text for statistical processing v1.0.2 (July 3, 2021) by Hubert Tournier $"
 
 # Default parameters. Can be overcome by environment variables, then command line options
 parameters = {

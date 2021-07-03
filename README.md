@@ -67,7 +67,7 @@ Our implementation tries to follow the [PEP 8](https://www.python.org/dev/peps/p
 Tested OK under Windows.
 
 ## HISTORY
-This utility was made for [The PNU project / PyNIX](https://github.com/HubTou/PNU), out of historical curiosity and for fun, though it doesn't seem very useful...
+This utility was made for the [PNU project](https://github.com/HubTou/PNU), out of historical curiosity and for fun, though it doesn't seem very useful...
 
 Some features were added compared to the original command:
 * [Unicode](https://en.wikipedia.org/wiki/Unicode) letters are now supported by default (the original command predated Unicode by 12 years).
@@ -85,3 +85,4 @@ This utility is available under the [3-clause BSD license](https://opensource.or
 
 ## AUTHORS
 [Hubert Tournier](https://github.com/HubTou)
+
