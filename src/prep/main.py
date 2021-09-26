@@ -12,7 +12,7 @@ import sys
 import unicodedata
 
 # Version string used by the what(1) and ident(1) commands:
-ID = "@(#) $Id: prep - prepare text for statistical processing v1.0.2 (July 3, 2021) by Hubert Tournier $"
+ID = "@(#) $Id: prep - prepare text for statistical processing v1.0.3 (September 26, 2021) by Hubert Tournier $"
 
 # Default parameters. Can be overcome by environment variables, then command line options
 parameters = {
@@ -25,6 +25,15 @@ parameters = {
 }
 
 PONCTUATION = "!(),.:;?"
+
+
+################################################################################
+def initialize_debugging(program_name):
+    """Debugging set up"""
+    console_log_format = program_name + ": %(levelname)s: %(message)s"
+    logging.basicConfig(format=console_log_format, level=logging.DEBUG)
+    logging.disable(logging.INFO)
+
 
 ################################################################################
 def display_help():
@@ -231,10 +240,8 @@ def process_file(file, ignore_words, only_words, word_number):
 def main():
     """The program's main entry point"""
     program_name = os.path.basename(sys.argv[0])
-    console_log_format = program_name + ": %(levelname)s: %(message)s"
-    logging.basicConfig(format=console_log_format, level=logging.DEBUG)
-    logging.disable(logging.INFO)
 
+    initialize_debugging(program_name)
     arguments = process_command_line()
 
     ignore_words = load_words_file(parameters["Ignore"])
